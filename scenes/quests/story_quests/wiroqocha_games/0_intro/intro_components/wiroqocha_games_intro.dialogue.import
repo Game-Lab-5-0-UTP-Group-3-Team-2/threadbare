@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://nmebunl22y2g"
+path="res://.godot/imported/wiroqocha_games_intro.dialogue-4a0ce3216bc1d55bd3e56cfb99f031c1.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/wiroqocha_games/0_intro/intro_components/wiroqocha_games_intro.dialogue"
+dest_files=["res://.godot/imported/wiroqocha_games_intro.dialogue-4a0ce3216bc1d55bd3e56cfb99f031c1.tres"]
+
+[params]
+
+defaults=true

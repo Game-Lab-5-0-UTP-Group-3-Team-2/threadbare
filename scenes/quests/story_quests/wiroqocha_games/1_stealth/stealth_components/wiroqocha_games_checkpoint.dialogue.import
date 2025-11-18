@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dpf5mywo1bg7o"
+path="res://.godot/imported/wiroqocha_games_checkpoint.dialogue-2a5e5769d6ebba58bf012bb6b357be27.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/wiroqocha_games/1_stealth/stealth_components/wiroqocha_games_checkpoint.dialogue"
+dest_files=["res://.godot/imported/wiroqocha_games_checkpoint.dialogue-2a5e5769d6ebba58bf012bb6b357be27.tres"]
+
+[params]
+
+defaults=true
