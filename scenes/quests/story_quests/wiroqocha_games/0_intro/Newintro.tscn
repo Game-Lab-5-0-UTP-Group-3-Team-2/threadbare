@@ -1,0 +1,191 @@
+[gd_scene load_steps=17 format=4 uid="uid://biwuwopvfh8gu"]
+
+[ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_mqpc5"]
+[ext_resource type="PackedScene" uid="uid://boc4ibh8o13d2" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/trees1.tscn" id="2_tepfx"]
+[ext_resource type="PackedScene" uid="uid://dxet7sajks8lr" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/trees2.tscn" id="3_335ug"]
+[ext_resource type="Texture2D" uid="uid://df5arjhdcfkgi" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/image.png" id="4_r86l0"]
+[ext_resource type="PackedScene" uid="uid://bgxcu8iukco6u" path="res://scenes/quests/story_quests/el_juguete_perdido/objects_components/goblin_sign.tscn" id="5_lm70f"]
+[ext_resource type="PackedScene" uid="uid://bp20cjimwi8l0" path="res://scenes/game_elements/props/buildings/house/house_2.tscn" id="6_6omjm"]
+[ext_resource type="Texture2D" uid="uid://bdhfcs6igu6di" path="res://assets/third_party/tiny-swords/Deco/14.png" id="7_3kutk"]
+[ext_resource type="PackedScene" uid="uid://bvpd7flewjkle" path="res://scenes/quests/story_quests/el_juguete_perdido/player_components/npcs_components/fray_idle.tscn" id="8_skuor"]
+[ext_resource type="PackedScene" uid="uid://cf5a4ramrfe7y" path="res://scenes/quests/story_quests/el_juguete_perdido/player_components/npcs_components/sheep.tscn" id="9_xkr6h"]
+[ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_blue.tres" id="10_7lvq5"]
+[ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="11_2oy87"]
+[ext_resource type="Resource" uid="uid://dekpih5s6exc5" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/intro.dialogue" id="12_i4nrr"]
+
+[sub_resource type="Animation" id="Animation_ld06i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OnTheGround/Character:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OnTheGround/Character:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400, 349)]
+}
+
+[sub_resource type="Animation" id="Animation_7swpb"]
+resource_name = "walk_off"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OnTheGround/Character:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walk", &"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OnTheGround/Character:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(495, 478), Vector2(1010, 478)]
+}
+
+[sub_resource type="Animation" id="Animation_blo5s"]
+resource_name = "walk_on"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OnTheGround/Character:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [&"walk", &"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OnTheGround/Character:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-50, 478), Vector2(495, 478)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qdpvj"]
+_data = {
+&"RESET": SubResource("Animation_ld06i"),
+&"walk_off": SubResource("Animation_7swpb"),
+&"walk_on": SubResource("Animation_blo5s")
+}
+
+[node name="Intro" type="Node2D"]
+
+[node name="TileMapLayers" type="Node2D" parent="."]
+modulate = Color(0.783523, 0.783523, 0.783523, 1)
+
+[node name="Ground" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray("AAAAAAUAAQAAAAEAAAABAAUAAQABAAEAAAACAAUAAQABAAEAAAADAAUAAQABAAEAAAAEAAUAAQABAAEAAAAFAAUAAQABAAEAAAAGAAUAAQABAAEAAAAHAAUAAQABAAEAAAAIAAUAAQABAAEAAAAJAAUAAQABAAEAAAAKAAUAAQABAAEAAAALAAUAAQABAAEAAAAMAAUAAQABAAEAAAANAAUAAQABAAEAAAAOAAUAAQACAAEAAAAAAAYAAQAAAAEAAAAAAAcAAQAAAAEAAAAAAAgAAQAAAAEAAAABAAYAAQABAAEAAAABAAcAAQABAAEAAAABAAgAAQABAAEAAAACAAYAAQABAAEAAAACAAcAAQABAAEAAAACAAgAAQABAAEAAAADAAYAAQABAAEAAAADAAcAAQABAAEAAAADAAgAAQABAAEAAAAEAAYAAQABAAEAAAAEAAcAAQABAAEAAAAEAAgAAQABAAEAAAAFAAYAAQABAAEAAAAFAAcAAQABAAEAAAAFAAgAAQABAAEAAAAGAAYAAQABAAEAAAAGAAcAAQABAAEAAAAGAAgAAQABAAEAAAAHAAYAAQABAAEAAAAHAAcAAQABAAEAAAAHAAgAAQABAAEAAAAIAAYAAQABAAEAAAAIAAcAAQABAAEAAAAIAAgAAQABAAEAAAAJAAYAAQABAAEAAAAJAAcAAQABAAEAAAAJAAgAAQABAAEAAAAKAAYAAQABAAEAAAAKAAcAAQABAAEAAAAKAAgAAQABAAEAAAALAAYAAQABAAEAAAALAAcAAQABAAEAAAALAAgAAQABAAEAAAAMAAYAAQABAAEAAAAMAAcAAQABAAEAAAAMAAgAAQABAAEAAAANAAYAAQABAAEAAAANAAcAAQABAAEAAAANAAgAAQABAAEAAAAOAAYAAQACAAEAAAAOAAcAAQACAAEAAAAOAAgAAQACAAEAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAABAAEAAQABAAEAAAACAAEAAQABAAEAAAACAAIAAQABAAEAAAADAAIAAQABAAEAAAAEAAIAAQABAAEAAAAFAAIAAQABAAEAAAAFAAMAAQABAAEAAAAGAAMAAQABAAEAAAAHAAQAAQABAAEAAAAIAAQAAQABAAEAAAAOAAQAAQACAAEAAAAOAAMAAQACAAEAAAAOAAIAAQACAAEAAAAOAAEAAQACAAEAAAAOAAAAAQACAAAAAAANAAQAAQABAAEAAAANAAMAAQABAAEAAAANAAIAAQABAAEAAAANAAEAAQABAAEAAAANAAAAAQABAAAAAAAMAAQAAQABAAEAAAAMAAMAAQABAAEAAAAMAAIAAQABAAEAAAAMAAEAAQABAAEAAAAMAAAAAQABAAAAAAALAAQAAQABAAEAAAALAAMAAQABAAEAAAALAAIAAQABAAEAAAALAAEAAQABAAEAAAALAAAAAQABAAAAAAAKAAQAAQABAAEAAAAKAAMAAQABAAEAAAAKAAIAAQABAAEAAAAKAAEAAQABAAEAAAAKAAAAAQABAAAAAAAJAAQAAQABAAEAAAAJAAMAAQABAAEAAAAJAAIAAQABAAEAAAAJAAEAAQABAAEAAAAJAAAAAQABAAAAAAAIAAMAAQABAAEAAAAIAAIAAQABAAEAAAAIAAEAAQABAAEAAAAIAAAAAQABAAAAAAAHAAMAAQABAAEAAAAHAAIAAQABAAEAAAAHAAEAAQABAAEAAAAHAAAAAQABAAAAAAAGAAQAAQABAAEAAAAGAAIAAQABAAEAAAAGAAEAAQABAAEAAAAGAAAAAQABAAAAAAAFAAQAAQABAAEAAAAFAAEAAQABAAEAAAAFAAAAAQABAAAAAAAEAAQAAQABAAEAAAAEAAMAAQABAAEAAAAEAAEAAQABAAEAAAAEAAAAAQABAAAAAAADAAQAAQABAAEAAAADAAMAAQABAAEAAAADAAEAAQABAAEAAAADAAAAAQABAAAAAAACAAQAAQABAAEAAAACAAMAAQABAAEAAAACAAAAAQABAAAAAAABAAQAAQABAAEAAAABAAMAAQABAAEAAAABAAIAAQABAAEAAAABAAAAAQABAAAAAAAAAAQAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAAIAAQAAAAEAAAA=")
+tile_set = ExtResource("1_mqpc5")
+metadata/_edit_lock_ = true
+
+[node name="Equipo2Trees2" parent="TileMapLayers" instance=ExtResource("2_tepfx")]
+position = Vector2(20, 100)
+
+[node name="Equipo2Trees3" parent="TileMapLayers" instance=ExtResource("3_335ug")]
+position = Vector2(553, 209)
+
+[node name="IntroImage" type="Sprite2D" parent="TileMapLayers"]
+position = Vector2(770, 227)
+scale = Vector2(0.802083, 0.802083)
+texture = ExtResource("4_r86l0")
+
+[node name="Sand" type="TileMapLayer" parent="TileMapLayers"]
+tile_map_data = PackedByteArray("AAAKAAEACAAAAAAAAAAKAAIACQADAAEAAAAKAAMACAADAAEAAAAKAAQACAADAAEAAAANAAEADAACAAAAAAANAAIACAADAAEAAAANAAMACwADAAEAAAANAAQACwADAAEAAAAKAAUACQAAAAIAAAALAAEACQABAAMAAAALAAUACQABAAMAAAAMAAEACAABAAMAAAAMAAUACAABAAMAAAANAAUACgACAAIAAAAAAAcAAQAGAAMAAAABAAcAAQAGAAMAAAACAAcAAQAGAAMAAAADAAcAAQAGAAMAAAAEAAcAAQAGAAMAAAAFAAcAAQAGAAMAAAAGAAcAAQAGAAMAAAAHAAcAAQAGAAMAAAAIAAcAAQAGAAMAAAAJAAcAAQAGAAMAAAAKAAcAAQAGAAMAAAALAAcAAQAGAAMAAAAMAAcAAQAGAAMAAAANAAcAAQAGAAMAAAAOAAcAAQAGAAMAAAA=")
+tile_set = ExtResource("1_mqpc5")
+
+[node name="GoblinSigns" type="Node2D" parent="TileMapLayers"]
+
+[node name="GoblinSign" parent="TileMapLayers/GoblinSigns" instance=ExtResource("5_lm70f")]
+position = Vector2(931, 403)
+
+[node name="GoblinSign2" parent="TileMapLayers/GoblinSigns" instance=ExtResource("5_lm70f")]
+position = Vector2(933, 529)
+
+[node name="Equipo2Trees1" parent="TileMapLayers" instance=ExtResource("2_tepfx")]
+position = Vector2(24, 625)
+
+[node name="House_2" parent="TileMapLayers" instance=ExtResource("6_6omjm")]
+position = Vector2(79, 335)
+
+[node name="People" type="Node2D" parent="TileMapLayers"]
+position = Vector2(-23, 27)
+
+[node name="Bone" type="Sprite2D" parent="TileMapLayers/People"]
+position = Vector2(346, 319)
+texture = ExtResource("7_3kutk")
+
+[node name="fray_idle" parent="TileMapLayers/People" instance=ExtResource("8_skuor")]
+position = Vector2(282, 329)
+look_at_side = 1
+
+[node name="sheep_idle" parent="TileMapLayers/People" instance=ExtResource("9_xkr6h")]
+position = Vector2(417, 327)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(153, 366)
+zoom = Vector2(1.333, 1.333)
+limit_left = 0
+limit_top = 0
+limit_right = 960
+limit_bottom = 540
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="OnTheGround" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Character" type="AnimatedSprite2D" parent="OnTheGround"]
+position = Vector2(400, 349)
+sprite_frames = ExtResource("10_7lvq5")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_qdpvj")
+}
+
+[node name="ScreenOverlay" type="CanvasLayer" parent="."]
+
+[node name="Cinematic" type="Node2D" parent="." node_paths=PackedStringArray("animation_player")]
+script = ExtResource("11_2oy87")
+dialogue = ExtResource("12_i4nrr")
+animation_player = NodePath("../OnTheGround/AnimationPlayer")
+next_scene = "uid://dhsmbgk4ex1d7"
+metadata/_custom_type_script = "uid://x1mxt6bmei2o"

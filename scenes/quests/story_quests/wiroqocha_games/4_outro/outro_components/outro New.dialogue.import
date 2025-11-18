@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://brx55j8r8x53y"
+path="res://.godot/imported/outro New.dialogue-f818c0640938fae55db553fa568833ed.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/wiroqocha_games/4_outro/outro_components/outro New.dialogue"
+dest_files=["res://.godot/imported/outro New.dialogue-f818c0640938fae55db553fa568833ed.tres"]
+
+[params]
+
+defaults=true
