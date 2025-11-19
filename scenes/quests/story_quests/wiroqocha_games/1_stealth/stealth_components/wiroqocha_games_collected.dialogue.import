@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://duyo70et7rjw0"
+path="res://.godot/imported/wiroqocha_games_collected.dialogue-b5831d0feefe5ec5c378fbdaf1ef5523.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/wiroqocha_games/1_stealth/stealth_components/wiroqocha_games_collected.dialogue"
+dest_files=["res://.godot/imported/wiroqocha_games_collected.dialogue-b5831d0feefe5ec5c378fbdaf1ef5523.tres"]
+
+[params]
+
+defaults=true
