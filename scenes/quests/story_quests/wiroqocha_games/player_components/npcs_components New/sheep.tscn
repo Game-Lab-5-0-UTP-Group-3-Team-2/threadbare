@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhvn8343uuumd"]
+
+[ext_resource type="Script" uid="uid://dv11604x2etuq" path="res://scenes/game_elements/characters/npcs/components/npc.gd" id="1_25po8"]
+[ext_resource type="SpriteFrames" uid="uid://clcisbaiww3vb" path="res://scenes/quests/story_quests/wiroqocha_games/player_components/npcs_components New/sheep_idle.tres" id="2_j1781"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vyb7"]
+height = 42.0
+
+[node name="sheep_idle" type="CharacterBody2D"]
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_25po8")
+sprite_frames = ExtResource("2_j1781")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-1, -17)
+sprite_frames = ExtResource("2_j1781")
+animation = &"idle"
+frame_progress = 0.780232
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_3vyb7")

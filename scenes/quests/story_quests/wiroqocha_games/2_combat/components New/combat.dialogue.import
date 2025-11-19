@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://d30uonm2tju5p"
+path="res://.godot/imported/combat.dialogue-52a4b2d276e01a8fa8067e2560926308.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/wiroqocha_games/2_combat/components New/combat.dialogue"
+dest_files=["res://.godot/imported/combat.dialogue-52a4b2d276e01a8fa8067e2560926308.tres"]
+
+[params]
+
+defaults=true

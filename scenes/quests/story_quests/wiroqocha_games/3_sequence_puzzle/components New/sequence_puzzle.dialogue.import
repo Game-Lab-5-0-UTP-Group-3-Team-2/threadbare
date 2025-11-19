@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://w7x5snpln5vr"
+path="res://.godot/imported/sequence_puzzle.dialogue-d6d8e47c75271ee01187e6460aecd06c.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/wiroqocha_games/3_sequence_puzzle/components New/sequence_puzzle.dialogue"
+dest_files=["res://.godot/imported/sequence_puzzle.dialogue-d6d8e47c75271ee01187e6460aecd06c.tres"]
+
+[params]
+
+defaults=true

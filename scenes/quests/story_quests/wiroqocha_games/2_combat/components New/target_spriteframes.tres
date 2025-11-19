@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://dxqhrvq331kco"]
+
+[ext_resource type="Texture2D" uid="uid://u31sbyo7ihh" path="res://scenes/quests/story_quests/wiroqocha_games/2_combat/components New/target.png" id="1_eo7nl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6cv3"]
+atlas = ExtResource("1_eo7nl")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atiir"]
+atlas = ExtResource("1_eo7nl")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfdns"]
+atlas = ExtResource("1_eo7nl")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab0xj"]
+atlas = ExtResource("1_eo7nl")
+region = Rect2(64, 64, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6cv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atiir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfdns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ab0xj")
+}],
+"loop": true,
+"name": &"filling",
+"speed": 10.0
+}]
