@@ -1,21 +1,18 @@
-[gd_scene load_steps=19 format=4 uid="uid://biwuwopvfh8gu"]
+[gd_scene load_steps=18 format=4 uid="uid://biwuwopvfh8gu"]
 
 [ext_resource type="TileSet" uid="uid://07fq3rspk8ia" path="res://scenes/tileset.tres" id="1_mqpc5"]
 [ext_resource type="Texture2D" uid="uid://bkvx56063dw03" path="res://StoneFloorTexture (1).png" id="2_lmrba"]
 [ext_resource type="PackedScene" uid="uid://boc4ibh8o13d2" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/trees1.tscn" id="2_tepfx"]
 [ext_resource type="PackedScene" uid="uid://dxet7sajks8lr" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/trees2.tscn" id="3_335ug"]
-[ext_resource type="Texture2D" uid="uid://df5arjhdcfkgi" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/image.png" id="4_r86l0"]
 [ext_resource type="PackedScene" uid="uid://bgxcu8iukco6u" path="res://scenes/quests/story_quests/el_juguete_perdido/objects_components/goblin_sign.tscn" id="5_lm70f"]
 [ext_resource type="PackedScene" uid="uid://bp20cjimwi8l0" path="res://scenes/game_elements/props/buildings/house/house_2.tscn" id="6_6omjm"]
+[ext_resource type="Texture2D" uid="uid://ejpgobt11gwf" path="res://Piso/Plaza con muerticos.png" id="6_ic4j8"]
 [ext_resource type="Texture2D" uid="uid://bdhfcs6igu6di" path="res://assets/third_party/tiny-swords/Deco/14.png" id="7_3kutk"]
 [ext_resource type="PackedScene" uid="uid://bvpd7flewjkle" path="res://scenes/quests/story_quests/el_juguete_perdido/player_components/npcs_components/fray_idle.tscn" id="8_skuor"]
 [ext_resource type="PackedScene" uid="uid://cf5a4ramrfe7y" path="res://scenes/quests/story_quests/el_juguete_perdido/player_components/npcs_components/sheep.tscn" id="9_xkr6h"]
 [ext_resource type="SpriteFrames" uid="uid://dtoylirwywk0j" path="res://scenes/game_elements/characters/components/sprite_frames/storyweaver_blue.tres" id="10_7lvq5"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="11_2oy87"]
 [ext_resource type="Resource" uid="uid://dekpih5s6exc5" path="res://scenes/quests/story_quests/el_juguete_perdido/0_intro/components/intro.dialogue" id="12_i4nrr"]
-
-[sub_resource type="TileSet" id="TileSet_ic4j8"]
-tile_size = Vector2i(64, 64)
 
 [sub_resource type="Animation" id="Animation_ld06i"]
 length = 0.001
@@ -116,6 +113,7 @@ modulate = Color(0.783523, 0.783523, 0.783523, 1)
 tile_map_data = PackedByteArray("AAAAAAUAAQAAAAEAAAABAAUAAQABAAEAAAACAAUAAQABAAEAAAADAAUAAQABAAEAAAAEAAUAAQABAAEAAAAFAAUAAQABAAEAAAAGAAUAAQABAAEAAAAHAAUAAQABAAEAAAAIAAUAAQABAAEAAAAJAAUAAQABAAEAAAAKAAUAAQABAAEAAAALAAUAAQABAAEAAAAMAAUAAQABAAEAAAANAAUAAQABAAEAAAAOAAUAAQACAAEAAAAAAAYAAQAAAAEAAAAAAAcAAQAAAAEAAAAAAAgAAQAAAAEAAAABAAYAAQABAAEAAAABAAcAAQABAAEAAAABAAgAAQABAAEAAAACAAYAAQABAAEAAAACAAcAAQABAAEAAAACAAgAAQABAAEAAAADAAYAAQABAAEAAAADAAcAAQABAAEAAAADAAgAAQABAAEAAAAEAAYAAQABAAEAAAAEAAcAAQABAAEAAAAEAAgAAQABAAEAAAAFAAYAAQABAAEAAAAFAAcAAQABAAEAAAAFAAgAAQABAAEAAAAGAAYAAQABAAEAAAAGAAcAAQABAAEAAAAGAAgAAQABAAEAAAAHAAYAAQABAAEAAAAHAAcAAQABAAEAAAAHAAgAAQABAAEAAAAIAAYAAQABAAEAAAAIAAcAAQABAAEAAAAIAAgAAQABAAEAAAAJAAYAAQABAAEAAAAJAAcAAQABAAEAAAAJAAgAAQABAAEAAAAKAAYAAQABAAEAAAAKAAcAAQABAAEAAAAKAAgAAQABAAEAAAALAAYAAQABAAEAAAALAAcAAQABAAEAAAALAAgAAQABAAEAAAAMAAYAAQABAAEAAAAMAAcAAQABAAEAAAAMAAgAAQABAAEAAAANAAYAAQABAAEAAAANAAcAAQABAAEAAAANAAgAAQABAAEAAAAOAAYAAQACAAEAAAAOAAcAAQACAAEAAAAOAAgAAQACAAEAAAACAAEAAQABAAEAAAACAAIAAQABAAEAAAADAAIAAQABAAEAAAAEAAIAAQABAAEAAAAFAAIAAQABAAEAAAAFAAMAAQABAAEAAAAGAAMAAQABAAEAAAAHAAQAAQABAAEAAAAIAAQAAQABAAEAAAAOAAQAAQACAAEAAAAOAAMAAQACAAEAAAAOAAIAAQACAAEAAAAOAAEAAQACAAEAAAAOAAAAAQACAAAAAAANAAQAAQABAAEAAAANAAMAAQABAAEAAAANAAIAAQABAAEAAAANAAEAAQABAAEAAAANAAAAAQABAAAAAAAMAAQAAQABAAEAAAAMAAMAAQABAAEAAAAMAAIAAQABAAEAAAAMAAEAAQABAAEAAAAMAAAAAQABAAAAAAALAAQAAQABAAEAAAALAAMAAQABAAEAAAALAAIAAQABAAEAAAALAAEAAQABAAEAAAALAAAAAQABAAAAAAAKAAQAAQABAAEAAAAKAAMAAQABAAEAAAAKAAIAAQABAAEAAAAKAAEAAQABAAEAAAAKAAAAAQABAAAAAAAJAAQAAQABAAEAAAAJAAMAAQABAAEAAAAJAAIAAQABAAEAAAAJAAEAAQABAAEAAAAJAAAAAQABAAAAAAAIAAIAAQABAAEAAAAIAAEAAQABAAEAAAAIAAAAAQABAAAAAAAHAAMAAQABAAEAAAAHAAIAAQABAAEAAAAHAAEAAQABAAEAAAAHAAAAAQABAAAAAAAGAAQAAQABAAEAAAAGAAIAAQABAAEAAAAGAAEAAQABAAEAAAAGAAAAAQABAAAAAAAFAAQAAQABAAEAAAAFAAEAAQABAAEAAAAFAAAAAQABAAAAAAAEAAQAAQABAAEAAAAEAAMAAQABAAEAAAAEAAEAAQABAAEAAAAEAAAAAQABAAAAAAADAAQAAQABAAEAAAADAAEAAQABAAEAAAACAAQAAQABAAEAAAACAAMAAQABAAEAAAABAAQAAQABAAEAAAABAAMAAQABAAEAAAABAAIAAQABAAEAAAAAAAQAAQAAAAEAAAAAAAMAAQAAAAEAAAAAAAIAAQAAAAEAAAABAAAAAQABAAAAAAACAAAAAQABAAAAAAADAAAAAQABAAAAAAADAAMAAQABAAEAAAAAAAEAAQAAAAEAAAABAAEAAQABAAEAAAAAAAAAAQAAAAAAAAAIAAMAAQABAAEAAAA=")
 tile_set = ExtResource("1_mqpc5")
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Piso" type="TileMapLayer" parent="TileMapLayers"]
 
@@ -485,8 +483,68 @@ position = Vector2(361, 165)
 scale = Vector2(0.129, 0.129)
 texture = ExtResource("2_lmrba")
 
+[node name="StoneFloorTexture(1)83" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(361, 231)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)84" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(361, 297)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)85" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(361, 363)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)86" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(361, 429)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)87" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(361, 495)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)88" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(361, 561)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
 [node name="StoneFloorTexture(1)41" type="Sprite2D" parent="TileMapLayers/Piso"]
 position = Vector2(427, 165)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)89" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(427, 231)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)90" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(427, 297)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)91" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(427, 363)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)92" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(427, 429)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)93" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(427, 495)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)94" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(427, 561)
 scale = Vector2(0.129, 0.129)
 texture = ExtResource("2_lmrba")
 
@@ -495,8 +553,68 @@ position = Vector2(491, 165)
 scale = Vector2(0.129, 0.129)
 texture = ExtResource("2_lmrba")
 
+[node name="StoneFloorTexture(1)95" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(491, 231)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)96" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(491, 297)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)97" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(491, 363)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)98" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(491, 429)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)99" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(491, 495)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)100" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(491, 561)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
 [node name="StoneFloorTexture(1)43" type="Sprite2D" parent="TileMapLayers/Piso"]
 position = Vector2(557, 165)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)101" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(557, 231)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)102" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(557, 297)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)103" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(557, 363)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)104" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(557, 429)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)105" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(557, 495)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)106" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(557, 561)
 scale = Vector2(0.129, 0.129)
 texture = ExtResource("2_lmrba")
 
@@ -505,8 +623,68 @@ position = Vector2(623, 165)
 scale = Vector2(0.129, 0.129)
 texture = ExtResource("2_lmrba")
 
+[node name="StoneFloorTexture(1)107" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(623, 231)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)108" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(623, 297)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)109" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(623, 363)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)110" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(623, 495)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)111" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(623, 429)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)112" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(623, 561)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
 [node name="StoneFloorTexture(1)45" type="Sprite2D" parent="TileMapLayers/Piso"]
 position = Vector2(689, 165)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)113" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(689, 231)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)114" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(689, 297)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)115" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(689, 363)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)116" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(689, 429)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)117" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(689, 495)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)118" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(689, 561)
 scale = Vector2(0.129, 0.129)
 texture = ExtResource("2_lmrba")
 
@@ -515,8 +693,68 @@ position = Vector2(755, 165)
 scale = Vector2(0.129, 0.129)
 texture = ExtResource("2_lmrba")
 
+[node name="StoneFloorTexture(1)119" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(755, 231)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)120" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(755, 297)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)121" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(755, 363)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)122" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(755, 429)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)123" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(755, 495)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)124" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(755, 561)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
 [node name="StoneFloorTexture(1)47" type="Sprite2D" parent="TileMapLayers/Piso"]
 position = Vector2(821, 165)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)125" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(821, 231)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)126" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(821, 297)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)127" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(821, 363)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)128" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(821, 429)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)129" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(821, 495)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)130" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(821, 561)
 scale = Vector2(0.129, 0.129)
 texture = ExtResource("2_lmrba")
 
@@ -525,8 +763,68 @@ position = Vector2(887, 165)
 scale = Vector2(0.129, 0.129)
 texture = ExtResource("2_lmrba")
 
+[node name="StoneFloorTexture(1)131" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(887, 231)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)132" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(887, 297)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)133" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(887, 363)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)134" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(887, 429)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)135" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(887, 495)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)136" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(887, 561)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
 [node name="StoneFloorTexture(1)50" type="Sprite2D" parent="TileMapLayers/Piso"]
 position = Vector2(953, 165)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)137" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(953, 231)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)138" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(953, 363)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)140" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(953, 429)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)141" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(953, 561)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)142" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(953, 495)
+scale = Vector2(0.129, 0.129)
+texture = ExtResource("2_lmrba")
+
+[node name="StoneFloorTexture(1)139" type="Sprite2D" parent="TileMapLayers/Piso"]
+position = Vector2(953, 297)
 scale = Vector2(0.129, 0.129)
 texture = ExtResource("2_lmrba")
 
@@ -541,10 +839,10 @@ position = Vector2(20, 100)
 [node name="Equipo2Trees3" parent="TileMapLayers" instance=ExtResource("3_335ug")]
 position = Vector2(553, 209)
 
-[node name="IntroImage" type="Sprite2D" parent="TileMapLayers"]
-position = Vector2(770, 227)
-scale = Vector2(0.802083, 0.802083)
-texture = ExtResource("4_r86l0")
+[node name="PlazaConMuerticos" type="Sprite2D" parent="TileMapLayers"]
+position = Vector2(767.5, 222.5)
+scale = Vector2(0.14160156, 0.20605467)
+texture = ExtResource("6_ic4j8")
 
 [node name="Sand" type="TileMapLayer" parent="TileMapLayers"]
 tile_map_data = PackedByteArray("AAAKAAIACQADAAEAAAAKAAMACAADAAEAAAAKAAQACAADAAEAAAANAAEADAACAAAAAAANAAIACAADAAEAAAANAAMACwADAAEAAAANAAQACwADAAEAAAAKAAUACQAAAAIAAAALAAEACQABAAMAAAALAAUACQABAAMAAAAMAAEACAABAAMAAAAMAAUACAABAAMAAAANAAUACgACAAIAAAAAAAcAAQAGAAMAAAABAAcAAQAGAAMAAAACAAcAAQAGAAMAAAADAAcAAQAGAAMAAAAEAAcAAQAGAAMAAAAFAAcAAQAGAAMAAAAGAAcAAQAGAAMAAAAHAAcAAQAGAAMAAAAIAAcAAQAGAAMAAAAJAAcAAQAGAAMAAAAKAAcAAQAGAAMAAAALAAcAAQAGAAMAAAAMAAcAAQAGAAMAAAANAAcAAQAGAAMAAAAOAAcAAQAGAAMAAAAKAAEACAAAAAAAAAA=")
@@ -578,11 +876,6 @@ look_at_side = 1
 [node name="sheep_idle" parent="TileMapLayers/People" instance=ExtResource("9_xkr6h")]
 position = Vector2(440, 333)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayers"]
-tile_set = SubResource("TileSet_ic4j8")
-
-[node name="TileMapLayer2" type="TileMapLayer" parent="TileMapLayers"]
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(153, 366)
 zoom = Vector2(1.333, 1.333)
@@ -602,7 +895,7 @@ sprite_frames = ExtResource("10_7lvq5")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround"]
+[node name="Animation" type="AnimationPlayer" parent="OnTheGround"]
 root_node = NodePath("../..")
 libraries = {
 &"": SubResource("AnimationLibrary_qdpvj")
@@ -613,6 +906,6 @@ libraries = {
 [node name="Cinematic" type="Node2D" parent="." node_paths=PackedStringArray("animation_player")]
 script = ExtResource("11_2oy87")
 dialogue = ExtResource("12_i4nrr")
-animation_player = NodePath("../OnTheGround/AnimationPlayer")
+animation_player = NodePath("../OnTheGround/Animation")
 next_scene = "uid://dhsmbgk4ex1d7"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
